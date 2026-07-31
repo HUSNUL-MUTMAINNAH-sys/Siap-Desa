@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/siap-desa/',
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
   },
 });
