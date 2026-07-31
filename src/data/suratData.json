@@ -1,0 +1,93 @@
+[
+  {
+    "id": "domisili",
+    "nama": "Surat Keterangan Domisili",
+    "deskripsi": "Bukti keterangan tempat tinggal warga di lingkungan desa.",
+    "icon": "MapPin",
+    "estimasi": "1 hari kerja",
+    "biaya": "Gratis",
+    "persyaratan": [
+      "Fotokopi KTP",
+      "Fotokopi Kartu Keluarga (KK)",
+      "Surat pengantar dari RT/RW",
+      "Mengisi formulir permohonan domisili"
+    ],
+    "template": "/templates/surat-domisili.txt"
+  },
+  {
+    "id": "kelahiran",
+    "nama": "Surat Keterangan Kelahiran",
+    "deskripsi": "Surat pengantar untuk pengurusan akta kelahiran di Dinas Dukcapil.",
+    "icon": "Baby",
+    "estimasi": "1 hari kerja",
+    "biaya": "Gratis",
+    "persyaratan": [
+      "Surat keterangan lahir dari bidan/rumah sakit",
+      "Fotokopi Kartu Keluarga (KK)",
+      "Fotokopi KTP kedua orang tua",
+      "Fotokopi buku nikah orang tua"
+    ],
+    "template": "/templates/surat-kelahiran.txt"
+  },
+  {
+    "id": "kematian",
+    "nama": "Surat Keterangan Kematian",
+    "deskripsi": "Surat pengantar untuk pengurusan akta kematian dan administrasi lainnya.",
+    "icon": "HeartHandshake",
+    "estimasi": "1 hari kerja",
+    "biaya": "Gratis",
+    "persyaratan": [
+      "Fotokopi KTP dan KK almarhum/almarhumah",
+      "Surat keterangan dari RT/RW",
+      "Surat keterangan medis (jika ada)",
+      "Fotokopi KTP pelapor (ahli waris)"
+    ],
+    "template": "/templates/surat-kematian.txt"
+  },
+  {
+    "id": "tidak-mampu",
+    "nama": "Surat Keterangan Tidak Mampu",
+    "deskripsi": "Digunakan untuk keperluan beasiswa, bantuan sosial, dan keringanan biaya.",
+    "icon": "HandHeart",
+    "estimasi": "1-2 hari kerja",
+    "biaya": "Gratis",
+    "persyaratan": [
+      "Fotokopi KTP dan KK",
+      "Surat pengantar RT/RW",
+      "Foto kondisi rumah (opsional, untuk verifikasi)",
+      "Menyebutkan keperluan penggunaan surat"
+    ],
+    "template": "/templates/surat-tidak-mampu.txt"
+  },
+  {
+    "id": "usaha",
+    "nama": "Surat Keterangan Usaha",
+    "deskripsi": "Bukti legalitas usaha skala mikro/kecil milik warga desa.",
+    "icon": "Store",
+    "estimasi": "2 hari kerja",
+    "biaya": "Gratis",
+    "persyaratan": [
+      "Fotokopi KTP pemilik usaha",
+      "Fotokopi Kartu Keluarga (KK)",
+      "Surat pengantar RT/RW",
+      "Foto lokasi usaha"
+    ],
+    "template": "/templates/surat-usaha.txt"
+  },
+  {
+    "id": "pengantar-nikah",
+    "nama": "Surat Pengantar Nikah",
+    "deskripsi": "Surat pengantar untuk pendaftaran nikah di KUA Kecamatan.",
+    "icon": "Heart",
+    "estimasi": "2 hari kerja",
+    "biaya": "Gratis",
+    "persyaratan": [
+      "Fotokopi KTP dan KK calon pengantin",
+      "Fotokopi akta kelahiran",
+      "Surat pengantar RT/RW",
+      "Pas foto ukuran 2x3 (2 lembar)",
+      "Surat izin orang tua (bagi calon pengantin di bawah 21 tahun)"
+    ],
+    "template": "/templates/surat-pengantar-nikah.txt"
+  }
+]

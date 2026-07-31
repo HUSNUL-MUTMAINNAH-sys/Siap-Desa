@@ -1,0 +1,39 @@
+{
+  "judul": "Alur Pelayanan Administrasi Desa",
+  "subjudul": "Empat langkah sederhana dari pengajuan hingga surat diterima.",
+  "tahapan": [
+    {
+      "id": 1,
+      "judul": "Ajukan Permohonan",
+      "deskripsi": "Warga datang langsung ke Kantor Desa atau mengisi formulir permohonan sesuai jenis surat yang dibutuhkan.",
+      "icon": "FileEdit",
+      "durasi": "5-10 menit"
+    },
+    {
+      "id": 2,
+      "judul": "Verifikasi Berkas",
+      "deskripsi": "Petugas pelayanan memeriksa kelengkapan dokumen dan kesesuaian data pemohon dengan Kartu Keluarga.",
+      "icon": "ShieldCheck",
+      "durasi": "10-20 menit"
+    },
+    {
+      "id": 3,
+      "judul": "Proses & Persetujuan",
+      "deskripsi": "Surat diproses oleh operator desa dan diajukan untuk tanda tangan serta cap resmi Kepala Desa.",
+      "icon": "Stamp",
+      "durasi": "1-2 hari kerja"
+    },
+    {
+      "id": 4,
+      "judul": "Surat Diterima",
+      "deskripsi": "Warga mengambil surat yang telah selesai di loket pelayanan, atau menerima notifikasi pengambilan.",
+      "icon": "PackageCheck",
+      "durasi": "Sesuai estimasi"
+    }
+  ],
+  "jamOperasional": [
+    { "hari": "Senin - Kamis", "jam": "08.00 - 15.00 WITA" },
+    { "hari": "Jumat", "jam": "08.00 - 11.00 WITA" },
+    { "hari": "Sabtu - Minggu", "jam": "Tutup" }
+  ]
+}

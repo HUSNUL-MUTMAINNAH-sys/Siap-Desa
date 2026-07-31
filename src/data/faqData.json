@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "pertanyaan": "Apakah semua layanan surat menyurat di SIAP DESA gratis?",
+    "jawaban": "Ya, seluruh layanan administrasi surat menyurat di kantor desa tidak dipungut biaya (gratis), sesuai dengan kebijakan pelayanan publik desa."
+  },
+  {
+    "id": 2,
+    "pertanyaan": "Apakah saya bisa mengajukan surat secara online melalui website ini?",
+    "jawaban": "Saat ini SIAP DESA berfungsi sebagai pusat informasi persyaratan dan alur pelayanan. Untuk pengajuan surat, warga tetap perlu datang langsung ke Kantor Desa dengan membawa berkas yang telah disiapkan sesuai daftar persyaratan."
+  },
+  {
+    "id": 3,
+    "pertanyaan": "Berapa lama waktu yang dibutuhkan untuk mengurus surat?",
+    "jawaban": "Estimasi waktu bervariasi tergantung jenis surat, mulai dari 1 hari kerja hingga 2 hari kerja. Detail estimasi dapat dilihat pada halaman Persyaratan Surat."
+  },
+  {
+    "id": 4,
+    "pertanyaan": "Apa yang harus dilakukan jika berkas persyaratan belum lengkap?",
+    "jawaban": "Petugas pelayanan akan menginformasikan berkas yang masih kurang. Warga dapat melengkapi berkas tersebut dan mengajukan kembali tanpa perlu mengulang dari awal."
+  },
+  {
+    "id": 5,
+    "pertanyaan": "Apakah bisa menitipkan pengurusan surat kepada orang lain?",
+    "jawaban": "Bisa, dengan menyertakan surat kuasa sederhana dan fotokopi KTP pemohon asli beserta KTP penerima kuasa."
+  },
+  {
+    "id": 6,
+    "pertanyaan": "Bagaimana cara menyampaikan keluhan atau saran terkait pelayanan?",
+    "jawaban": "Warga dapat menyampaikan keluhan atau saran melalui halaman Kontak, baik melalui WhatsApp, email, maupun mengisi Buku Tamu digital pada website ini."
+  }
+]
