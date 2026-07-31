@@ -102,27 +102,66 @@ Buka `http://localhost:5173` di browser.
 > secara detail — namun data tetap tersimpan di spreadsheet selama URL benar
 > dan deployment diatur "Anyone" dapat mengakses.
 
-## 🌐 Deploy ke GitHub Pages
+## 🌐 Siap Deploy ke GitHub Pages (Otomatis)
 
-1. Buat repository baru di GitHub, misalnya bernama `siap-desa`.
-2. Sesuaikan `base` di `vite.config.js` dan `homepage` di `package.json` agar
-   sesuai dengan nama repository Anda, misal `/siap-desa/`.
-3. Sesuaikan juga `basename` pada `src/main.jsx` dan `pathSegmentsToKeep` pada
-   `public/404.html` bila nama repo berbeda.
-4. Install dependency deploy (sudah termasuk di `devDependencies`):
+Project ini sudah dilengkapi **GitHub Actions workflow** (`.github/workflows/deploy.yml`)
+yang otomatis build & publish setiap kali Anda `git push` ke branch `main`.
+Base path juga terdeteksi otomatis dari nama repository — **tidak perlu edit
+`vite.config.js` atau `main.jsx` secara manual**.
 
-   ```bash
-   npm install
-   ```
+**Langkah-langkah:**
 
-5. Build dan deploy:
+1. Buat repository baru di GitHub (bebas nama apapun, misal `siap-desa`).
+2. Push project ini ke repository tersebut:
 
    ```bash
-   npm run deploy
+   git init
+   git add .
+   git commit -m "Initial commit - SIAP DESA"
+   git branch -M main
+   git remote add origin https://github.com/USERNAME/NAMA-REPO.git
+   git push -u origin main
    ```
 
-6. Aktifkan GitHub Pages di **Settings → Pages**, pilih branch `gh-pages`.
-7. Website akan tersedia di `https://<username>.github.io/siap-desa/`.
+3. Di GitHub, buka repo → **Settings → Pages**.
+4. Pada **Build and deployment → Source**, pilih **GitHub Actions** (bukan
+   "Deploy from a branch").
+5. Tunggu tab **Actions** selesai berjalan (ikon centang hijau ✅), lalu buka
+   URL yang ditampilkan di situ / di Settings → Pages, biasanya:
+
+   ```
+   https://USERNAME.github.io/NAMA-REPO/
+   ```
+
+6. Selesai! Setiap perubahan berikutnya yang di-`push` ke `main` akan otomatis
+   ter-deploy ulang tanpa perintah tambahan.
+
+> Jika nama repo Anda adalah `USERNAME.github.io` (Pages tipe User/Organization),
+> situs otomatis terdeteksi tayang di root domain (`https://USERNAME.github.io/`)
+> tanpa sub-path. Untuk kasus ini, ubah juga `pathSegmentsToKeep = 1` menjadi
+> `pathSegmentsToKeep = 0` di `public/404.html` agar navigasi langsung ke
+> halaman seperti `/buku-tamu` tetap berfungsi.
+
+### Alternatif: Deploy Manual via Branch `gh-pages`
+
+Jika lebih suka metode manual (tanpa GitHub Actions):
+
+```bash
+npm install
+npm run deploy
+```
+
+Lalu di **Settings → Pages**, pilih **Source: Deploy from a branch**, branch
+`gh-pages`, folder `/ (root)`. Karena base path dideteksi dari environment
+variable `GITHUB_REPOSITORY` (hanya tersedia di GitHub Actions), untuk metode
+manual ini set base secara manual di `vite.config.js`:
+
+```js
+base: '/NAMA-REPO/', // atau '/' jika deploy ke root domain
+```
+
+dan `basename` di `src/main.jsx` akan otomatis mengikuti nilai tersebut
+karena sudah membaca `import.meta.env.BASE_URL`.
 
 ## 📝 Mengelola Konten
 

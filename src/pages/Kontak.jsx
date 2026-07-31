@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { MessageCircle, Mail, Clock, MapPin, QrCode } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle.jsx';
 import Reveal from '../components/ui/Reveal.jsx';
@@ -5,10 +6,16 @@ import pelayananData from '../data/pelayananData.json';
 
 const WHATSAPP_NUMBER = '6281234567890';
 const EMAIL = 'layanan@siapdesa-bantaeng.id';
-// Ganti "username" dengan akun GitHub Anda saat deploy.
-const BUKU_TAMU_URL = 'https://username.github.io/siap-desa/buku-tamu';
 
 export default function Kontak() {
+  // URL Buku Tamu dibangun otomatis dari domain tempat situs ini berjalan,
+  // jadi tetap benar di localhost, GitHub Pages, atau domain kustom manapun.
+  const [bukuTamuUrl, setBukuTamuUrl] = useState('');
+  useEffect(() => {
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+    setBukuTamuUrl(`${window.location.origin}${base}/buku-tamu`);
+  }, []);
+
   return (
     <div className="pt-32 pb-24 px-5 md:px-8">
       <div className="mx-auto max-w-7xl">
@@ -105,12 +112,14 @@ export default function Kontak() {
         <Reveal delay={0.1} className="mt-8">
           <div className="card-premium p-8 flex flex-col sm:flex-row items-center gap-6 bg-gradient-to-br from-desa-green-500 to-desa-blue-500 !border-none text-white">
             <div className="rounded-2xl bg-white p-3 shrink-0">
-              <img
-                src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(BUKU_TAMU_URL)}`}
-                alt="QR Code menuju halaman Buku Tamu"
-                width={160}
-                height={160}
-              />
+              {bukuTamuUrl && (
+                <img
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(bukuTamuUrl)}`}
+                  alt="QR Code menuju halaman Buku Tamu"
+                  width={160}
+                  height={160}
+                />
+              )}
             </div>
             <div className="text-center sm:text-left">
               <div className="flex items-center gap-2 justify-center sm:justify-start">

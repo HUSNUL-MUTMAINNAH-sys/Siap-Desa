@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Project Setup Reminder",
+  "description": "Ingatkan untuk follow best practices saat membuat project baru dengan Vite dan React",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Saya akan membuat project baru. Tolong ingatkan checklist setup yang benar untuk menghindari dependency conflicts dan vulnerability issues. Referensikan ke #Project Setup Guide dari steering files.\""
+  }
+}
